@@ -4,9 +4,13 @@ public class Percobaan207 {
 
     static int hitungPangkat(int x, int y) {
         if (y == 0) {
-            return (1);
+            return 1;
+        } else if (y == 1){
+            System.out.print(x + "=");
+            return x;
         } else {
-            return (x *hitungPangkat(x, y - 1));
+            System.out.print(x + "x");
+             return (x * hitungPangkat(x, y - 1));
         }
     }
 
@@ -22,7 +26,9 @@ public class Percobaan207 {
     System.out.print("Pangkat : ");
     pangkat = scan.nextInt();
 
-    System.out.println(hitungPangkat(bilangan, pangkat));
+   int perkalian = hitungPangkat(pangkat, bilangan);
+   System.out.print(perkalian);
+
     }
     
 }
